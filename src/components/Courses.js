@@ -6,7 +6,7 @@ class Courses extends Component {
     return (
       <div className="main-content courses">
         <div className="course-header group">
-          <h2>Courses</h2>
+          <h2>{this.props.route.title}</h2>
           <ul className="course-nav">
             <li><NavLink to="/courses/html">HTML</NavLink></li>
             <li><NavLink to="/courses/css">CSS</NavLink></li>

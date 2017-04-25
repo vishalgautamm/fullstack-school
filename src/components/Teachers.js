@@ -1,7 +1,7 @@
 import React from 'react';
 import TeacherList from '../data/teachers';
 
-const Teachers = () => {
+const Teachers = (props) => {
   let teachers = TeacherList.map((teacher) => {
     return (
       <li className="teacher" key={teacher.id} >
@@ -10,13 +10,13 @@ const Teachers = () => {
         <p>{teacher.bio}</p>
       </li>
     );
-  }); 
-  
+  });
+
   return (
     <div className="main-content">
-      <h2>Teachers</h2>
+      <h2>{props.route.title}</h2>
       <ul className="group">
-        {teachers}    
+        {teachers}
       </ul>
     </div>
   );
