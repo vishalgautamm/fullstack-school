@@ -15,9 +15,11 @@ import Teachers from './components/Teachers';
 const mountNode = document.getElementById('root');
 render((
   <Router history={hashHistory} >
-    <Route path="/" component={Home} />
-    <Route path="/about" component={About} />
-    <Route path="/teachers" component={Teachers} />
-    <Route path="/courses" component={Courses} />
+    <Route component={App}>
+      <Route path="/" component={Home} />
+      <Route path="/about" component={About} />
+      <Route path="/teachers" component={Teachers} />
+      <Route path="/courses" component={Courses} />
+    </Route>
   </Router>
 ), mountNode);
