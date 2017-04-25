@@ -7,6 +7,7 @@ import Home from './components/Home';
 import About from './components/About';
 import Courses from './components/Courses';
 import Teachers from './components/Teachers';
+import NotFound from './components/NotFound';
 
 import HTML from './components/courses/HTML';
 import CSS from './components/courses/CSS';
@@ -26,6 +27,7 @@ const Routes = (
         <Route path="css" component={CSS} />
         <Route path="javascript" component={Javascript} />
       </Route>
+      <Route path="*" component={NotFound} />
     </Route>
   </Router>
 );
