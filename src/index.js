@@ -1,15 +1,17 @@
-// Libs
 import React from 'react';
 import { render } from 'react-dom';
+import { Router, Route, hashHistory } from 'react-router';
 
-// CSS 
+//CSS
 import './css/style.css';
 
-// Components
+// components
 import App from './components/App';
+import Home from './components/Home';
 
-// Render
-render(
-  <App />,
-  document.getElementById('root')
-);
+const mountNode = document.getElementById('root');
+render((
+  <Router history={hashHistory} >
+    <Route path="/" component={Home} />
+  </Router>
+), mountNode);
